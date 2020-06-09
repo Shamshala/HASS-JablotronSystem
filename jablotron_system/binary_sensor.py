@@ -62,7 +62,7 @@ from concurrent.futures import ThreadPoolExecutor
 from homeassistant.helpers.entity import Entity
 from homeassistant.components.binary_sensor import (
     PLATFORM_SCHEMA,
-    BinarySensorDevice,
+    BinarySensorEntity,
 )
 from homeassistant.const import (
     STATE_ON,
@@ -90,7 +90,7 @@ async def async_setup_platform(hass: HomeAssistantType, config: ConfigType, asyn
     data = DeviceScanner(hass, config, async_add_entities, devices)
 
 
-class JablotronSensor(BinarySensorDevice):
+class JablotronSensor(BinarySensorEntity):
     """Representation of a Sensor."""
 
     def __init__(self, hass: HomeAssistantType, dev_id: str):
