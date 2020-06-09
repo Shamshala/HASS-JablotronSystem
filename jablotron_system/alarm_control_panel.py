@@ -28,7 +28,7 @@ _LOGGER = logging.getLogger(__name__)
 async def async_setup_platform(hass: HomeAssistantType, config: ConfigType, async_add_entities, discovery_info=None):
     async_add_entities([JablotronAlarm(hass, config)])
 
-class JablotronAlarm(alarm.AlarmControlPanel):
+class JablotronAlarm(alarm.AlarmControlPanelEntity):
     """Representation of a Jaboltron alarm status."""
 
     def __init__(self, hass, config):
