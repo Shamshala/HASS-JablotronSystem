@@ -14,6 +14,8 @@ DEFAULT_NAME = 'Jablotron Alarm'
 
 CONF_CODE_ARM_REQUIRED = 'code_arm_required'
 CONF_CODE_DISARM_REQUIRED = 'code_disarm_required'
+CONF_CODE_PANEL_ARM_REQUIRED = 'code_panel_arm_required'
+CONF_CODE_PANEL_DISARM_REQUIRED = 'code_panel_disarm_required'
 CONF_STATE_TOPIC = 'state_topic'
 CONF_COMMAND_TOPIC = 'command_topic'
 DEFAULT_STATE_TOPIC = 'home-assistant/mqtt_example/state'
@@ -26,6 +28,8 @@ CONFIG_SCHEMA = vol.Schema({
         vol.Required(CONF_CODE): cv.string,
         vol.Optional(CONF_CODE_ARM_REQUIRED, default=False): cv.boolean,
         vol.Optional(CONF_CODE_DISARM_REQUIRED, default=True): cv.boolean,
+        vol.Optional(CONF_CODE_PANEL_ARM_REQUIRED, default=False): cv.boolean,
+        vol.Optional(CONF_CODE_PANEL_DISARM_REQUIRED, default=True): cv.boolean,
         vol.Optional(CONF_NAME, default=DEFAULT_NAME): cv.string,
         vol.Optional(CONF_STATE_TOPIC, default=DEFAULT_STATE_TOPIC): mqtt.valid_subscribe_topic,
         vol.Optional(CONF_COMMAND_TOPIC, default=DEFAULT_COMMAND_TOPIC): mqtt.valid_subscribe_topic
