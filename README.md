@@ -23,6 +23,8 @@ Optional arguments are:
 ```
   code_arm_required: True
   code_disarm_required: True
+  code_panel_arm_required: True
+  code_panel_disarm_required: True
   state_topic: "backend/alarm_control_panel/jablotron/state"
   command_topic: "backend/alarm_control_panel/jablotron/set"
 ```
@@ -109,9 +111,9 @@ binary_sensor:
 ```
 
 ## Tested with
-- Home Assistant 0.94.0b3, 0.97.0, installed in docker at RPi 3 model B+ and RPi 4
-- Jablotron JA-101K-LAN, firmware: LJ60422, hardware: LJ16123
-- Jablotron magnetic and PIR (motion) sensors
+- Home Assistant 0.110.3
+- Jablotron JA-101K, firmware: LJ60422, hardware: LJ16123
+- Jablotron wired magnetic and PIR (motion) sensors
 
 ## Demo
 
@@ -150,7 +152,7 @@ Opened up 2 browsers. Up = local host, down = remote host based on MQTT:
 - [DONE!] Added MQTT support
 
 ## Credits
-Big thanks to [mattsaxon](https://community.home-assistant.io/u/mattsaxon) and [Marcel1](https://community.home-assistant.io/u/marcel1)!
+Majority of work made by [mattsaxon](https://community.home-assistant.io/u/mattsaxon),  [plaksnor](https://community.home-assistant.io/u/plaksnor) and [Marcel1](https://community.home-assistant.io/u/marcel1)! Thanks to you guys!
 
 Work in progress. Any help would be great!
 
