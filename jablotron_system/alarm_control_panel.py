@@ -109,6 +109,10 @@ class JablotronAlarm(alarm.AlarmControlPanelEntity):
 #        return 'alarm_control_panel.jablotron.test'
 
     @property
+    def unique_id(self):
+        return self.dev_id
+
+    @property
     def should_poll(self):
         """No polling needed."""
         return False
