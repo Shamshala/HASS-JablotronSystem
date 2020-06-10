@@ -20,17 +20,18 @@ jablotron_system:
 ```
 Both options 'port' and 'code' are required.
 
-Optional arguments are:
+Optional arguments below.
+If the system requires code to be included in the communication packets:
 ```
   code_arm_required: True
   code_disarm_required: True
 ```
-If the system requires code to be included in the communication packets.
+If the code should be entered via AlarmPanel's keypad in order to be able to dis/arm your system:
 ```
   code_panel_arm_required: True
   code_panel_disarm_required: True
 ```
-If the code should be entered via AlarmPanel's keypad in order to be able to dis/arm your system.
+
 
 Note: Because my serial cable presents as a HID device there format is /dev/hidraw[x], others that present as serial may be at /dev/ttyUSB0 or similar. Use the following command line to identify the appropriate device:
 
